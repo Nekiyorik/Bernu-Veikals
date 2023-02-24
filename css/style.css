@@ -138,6 +138,7 @@ nav .wrapper{
     border: 1px solid  #E4E7EE;
     padding: 0 20px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .nav-burger p{
     display: flex;
