@@ -76,8 +76,6 @@ header .wrapper{
     display: flex;
     justify-content: space-between;
 }
-.logo {
-}
 .page-nav {
     display: flex;
     justify-content: space-between;
@@ -115,19 +113,22 @@ header .wrapper{
     font-weight: 500;
 }
 
+/* Меню навигации */
+
 nav{
     background-color: #F4F5F9;
-    border: 1px solid  #E4E7EE;
+    outline: 1px solid  #E4E7EE;
     height: 70px;
     user-select: none;
     position: relative;
+    box-sizing: border-box;
 }
 nav .wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+/* Каталог и кнопка его открытия */
 .nav-burger {
     width: 356px;
     box-sizing: border-box;
@@ -136,6 +137,8 @@ nav .wrapper{
     align-items: center;
     position: relative;
     border: 1px solid  #E4E7EE;
+    border-bottom: 0;
+    border-top: 0;
     padding: 0 20px;
     text-transform: uppercase;
     cursor: pointer;
@@ -185,19 +188,50 @@ nav .wrapper{
 .category-item p img{
     margin-right: 10px;
 }
-
-.nav__search {
+/* второй блок навигации */
+/* строка поиска */
+.nav-aside{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 24px;
 }
+.nav__search {
+    flex: 1;
+    height: 42px;
+    max-width: 490px;
+    background-color: #fff;
+    border: 1px solid #B7B8C5;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.nav__search label{
+    height: inherit;
+    box-sizing: border-box;
+    width: 100%;
+}
+.nav__search label input{
+    line-height: 42px;
+    width: inherit;
+}
+.nav__search label img{
+    margin-left: 15px;
+}
+.nav__search button{
+    height: inherit;
+    cursor: pointer;
+}
+
+
+
+/* кнопки для доступа к данным пользователя */
 .nav__user {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.user-account {
-}
-.user-favour {
-}
-.user-cart {
 }
 .banner, .banners-main{
     background-color: #929191;
