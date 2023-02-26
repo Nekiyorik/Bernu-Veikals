@@ -53,10 +53,10 @@ a{
     text-decoration: none;
     cursor: pointer;
 }
-img{
+/* img{
     width: 100%;
     height: 100%;
-}
+} */
 .wrapper {
     width: 1116px;
     margin: 0 auto;
@@ -365,4 +365,85 @@ nav .wrapper{
 .photo-slide__list li{
     max-width: 24.5%;
     height: 100%;
+}
+/* О нас */
+.about{
+    padding: 40px 0;
+}
+.about-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.about-wrap section{
+    display: flex;
+    align-items: center;
+}
+.about-img {
+    height: 50px;
+    margin-right: 15px;
+}
+.about-text {
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #090F24;
+}
+/* блок с ассортиментом */
+.wideass{
+    background-color: #F4F5F9;
+    padding: 65px 0;
+    text-align: center;
+}
+.wideass-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.wideass-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 166px;
+    gap: 24px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 23px 0;
+}
+.wideass-item:hover{
+    background: #74CCD8;
+    box-shadow: 0px 2px 4px rgba(51, 196, 223, 0.5);
+}
+.wideass-item:hover .wideass-text{
+    color: #fff;
+}
+.wideass-img{
+    width: 83px;
+    height: 83px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.wideass-img img{
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+.wideass-text{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    color: #090F24;
+}
+.wideass-item:last-child img{
+    bottom: 0;
+    left: 10px;
+    transform: translateX(0);
 }
