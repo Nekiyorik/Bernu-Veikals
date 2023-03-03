@@ -501,20 +501,6 @@ nav .wrapper {
 .rating:not(:checked) > label:before {
   content: "★";
 }
-.rating > input:checked ~ label {
-  color: gold;
-}
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-  color: gold;
-}
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-  color: gold;
-}
 /* блок просмотреннвх ранее*/
 .watched{
   padding: 60px 0;
