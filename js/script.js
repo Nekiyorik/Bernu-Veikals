@@ -10,7 +10,6 @@ $('document').ready(function(){
         $(this).toggleClass('pink')
         $(this).find('p').css('color', '#090F24')
     });
-
     $('.slider').slick({
         infinite: true,
         slidesToShow: 4,
@@ -20,7 +19,3 @@ $('document').ready(function(){
         prevArrow: $('.prev')
       });
 });
-document.querySelector(".like-button").addEventListener("click", (e) => {
-    e.currentTarget.classList.toggle("liked");
-});
-  
