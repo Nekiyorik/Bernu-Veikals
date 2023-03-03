@@ -18,4 +18,31 @@ $('document').ready(function(){
         nextArrow: $('.next'),
         prevArrow: $('.prev')
       });
+    
+    //рейтинговая система товаров
+    $('.rating label').click(function(){
+        var estimation=$(this).attr("estimation"); //хранит в себе оценку (можно и с сервера передать)
+        var ratingStarsArr=$(this).parent().find("label");
+        console.log(ratingStarsArr);
+        for (var i = 0; i < ratingStarsArr.length; i++) {
+            if (i<=estimation-1) {
+                ratingStarsArr[i].style.color="gold";
+            }
+            else{
+                ratingStarsArr[i].style.color="lightgrey";
+            }
+        }})
+    $('.rating label').hover(function(){
+        var estimation=$(this).attr("estimation"); //хранит в себе оценку (можно и с сервера передать)
+        var ratingStarsArr=$(this).parent().find("label");
+        for (var i = 0; i < ratingStarsArr.length; i++) {
+            if (i<=estimation-1) {
+                ratingStarsArr[i].style.color="gold";
+            }
+            else{
+                ratingStarsArr[i].style.color="lightgrey";
+            }
+        }})
+    
+    //
 });
