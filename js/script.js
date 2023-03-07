@@ -11,7 +11,6 @@ $('document').ready(function(){
         $(this).find('p').css('color', '#090F24')
     });
 
-    //слайдеры
     $('.slider-watched').slick({
         infinite: true,
         slidesToShow: 4,
