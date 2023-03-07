@@ -10,14 +10,22 @@ $('document').ready(function(){
         $(this).toggleClass('pink')
         $(this).find('p').css('color', '#090F24')
     });
-    $('.slider').slick({
+    $('.slider-watched').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
         arrow:true,
-        nextArrow: $('.next'),
-        prevArrow: $('.prev')
-      });
+        nextArrow: $('.next-watched'),
+        prevArrow: $('.prev-watched')
+    });
+    $('.slider-promotion').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrow:true,
+        nextArrow: $('.next-promotion'),
+        prevArrow: $('.prev-promotion')
+    });
     
     //рейтинговая система товаров
     $('.rating label').click(function(){
@@ -31,7 +39,8 @@ $('document').ready(function(){
             else{
                 ratingStarsArr[i].style.color="lightgrey";
             }
-        }})
+        }
+    })
     $('.rating label').hover(function(){
         var estimation=$(this).attr("estimation"); //хранит в себе оценку (можно и с сервера передать)
         var ratingStarsArr=$(this).parent().find("label");
@@ -42,7 +51,8 @@ $('document').ready(function(){
             else{
                 ratingStarsArr[i].style.color="lightgrey";
             }
-        }})
+        }
+    })
     
     //
 });

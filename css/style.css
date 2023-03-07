@@ -65,6 +65,7 @@ a {
   width: 1116px;
   margin: 0 auto;
   height: inherit;
+  position: relative;
 }
 .blue {
   background: #74ccd8;
@@ -508,7 +509,7 @@ nav .wrapper {
 .watched .wrapper {
   position: relative;
 }
-.watched h2{
+h2{
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 600;
