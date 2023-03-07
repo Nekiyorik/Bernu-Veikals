@@ -55,8 +55,4 @@ $('document').ready(function(){
         }
     })
     
-    //лайк
-    $( ".like-button span" ).click(function() {
-        $( ".like-button span" ).toggleClass( "press", 1000 );
-      });
 });
