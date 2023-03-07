@@ -10,6 +10,7 @@ $('document').ready(function(){
         $(this).toggleClass('pink')
         $(this).find('p').css('color', '#090F24')
     });
+
     $('.slider-watched').slick({
         infinite: true,
         slidesToShow: 4,
@@ -54,5 +55,8 @@ $('document').ready(function(){
         }
     })
     
-    //
+    //лайк
+    $( ".like-button span" ).click(function() {
+        $( ".like-button span" ).toggleClass( "press", 1000 );
+      });
 });
