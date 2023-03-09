@@ -27,6 +27,23 @@ $('document').ready(function(){
         nextArrow: $('.next-promotion'),
         prevArrow: $('.prev-promotion')
     });
+    /*слайдер на странице товара*/
+    $('.product-page__slider-for').slick({
+     slidesToShow: 1,
+     slidesToScroll: 1,
+     arrows: false,
+     fade: true,
+     asNavFor: '.product-page__slider-nav'
+   });
+   $('.product-page__slider-nav').slick({
+     slidesToShow: 5,
+     slidesToScroll: 1,
+     asNavFor: '.product-page__slider-for',
+     centerMode: true,
+     focusOnSelect: true,
+     variableWidth: true
+   });
+    
     
     //рейтинговая система товаров
     $('.rating label').click(function(){
