@@ -29,19 +29,21 @@ $('document').ready(function(){
     });
     /*слайдер на странице товара*/
     $('.product-page__slider-for').slick({
-     slidesToShow: 1,
-     slidesToScroll: 1,
-     arrows: false,
-     fade: true,
-     asNavFor: '.product-page__slider-nav'
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.product-page__slider-nav'
    });
    $('.product-page__slider-nav').slick({
-     slidesToShow: 5,
-     slidesToScroll: 1,
-     asNavFor: '.product-page__slider-for',
-     centerMode: true,
-     focusOnSelect: true,
-     variableWidth: true
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.product-page__slider-for',
+        centerMode: true,
+        focusOnSelect: true,
+        variableWidth: true,
+        prevArrow: $('.product-page__slider-arrow-prev'),
+        nextArrow: $('.product-page__slider-arrow-next')
    });
     
     

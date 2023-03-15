@@ -596,47 +596,90 @@ h2{
 
 /* страница товара */
 
-.product-page {
+.bread{
+  margin-top: 10px;
+}
+.bread a{
+  font-family: 'NotoSans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #B7B8C5;
+}
+.product-page{
+  margin-top: 25px;
+}
+.product-page h1{
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  color: #090F24;
+  margin-bottom: 30px;
+}
+.product-page__wrap{
+  display: flex;
+  gap: 24px;
 }
 .product-page__slider {
   width: 450px;
 }
 .product-page__slider-wrap{
   position: relative;
+  width: 100%;
+  padding: 0 20px;
+}
+.product-page__slider-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.product-page__slider-arrow-prev{
+  left: 10px;
+}
+.product-page__slider-arrow-next{
+  right: 10px;
 }
 .product-page__slider-for {
   width: 410px;
 }
 .product-page__slider-for-img {
   width: 410px;
-  border: 1px solid #000;
 }
 .product-page__slider-nav {
-  width: 410px;
+  width: 450px;
 }
 .product-page__slider-nav-img {
   width: 60px;
   height: 60px;
   box-sizing: border-box;
-  border: 1px solid #000;
   border-radius: 5px;
   overflow: hidden;
   margin-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 .product-page__slider-nav-img img{
   width: 100%;
-
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
 .product-page__actions {
+  flex: 1;
 }
 .product-page__actions-info {
 }
 .product-page__actions-wrap {
 }
+.product-page__info-del, .product-page__info-id {
+  border: 1px solid #E4E7EE;
+  border-radius: 13px;
+  padding: 24px 20px;
+}
 .product-page__info-del {
+  margin-bottom: 20px;
 }
 .product-page__info-id {
 }
