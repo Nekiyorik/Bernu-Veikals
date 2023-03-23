@@ -78,6 +78,11 @@ a {
   background: #ed9bc1;
   color: #fff;
 }
+button {
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+}
 header {
   padding: 10px 0;
   font-size: 13px;
@@ -671,7 +676,7 @@ h2{
 }
 .product-page__actions-info {
 }
-.product-page__actions-info, .product-page__info-buy, .product-page__info-smm {
+.product-page__actions-info, .product-page__info-buy {
   border: 1px solid #E4E7EE;
   border-radius: 13px;
   padding: 24px 20px;
@@ -738,7 +743,7 @@ h2{
 .product-page__info-buy-price-cena span:last-child{
   font-weight: 600; color: #B7B8C5; text-decoration-line: line-through;
 }
-.number {
+.product-page__info-buy-price-number {
 	user-select: none;
 	position: relative;
 	text-align: left;
@@ -790,5 +795,86 @@ h2{
 	width: 57px;
 	text-align: center;
 }
-.product-page__info-smm {
+.product-page__info-buy-price-button{
+  display: flex;
+  gap: 10px;
+}
+.button-buy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 42px;
+  width: 188px;
+  height: 46px;
+  gap: 10px;
+
+  /* Green */
+
+  background: #69CB87;
+  /* Blue Swadow */
+
+  box-shadow: 0px 2px 4px rgba(51, 196, 223, 0.2);
+  border-radius: 25px;
+
+  font-size: 15px;
+  
+  /* White */
+  
+  color: #FFFFFF;
+}
+.button-compare{
+  height: 46px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  background: none;
+}
+.button-compare span{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  font-size: 1.2em;
+  border-radius: 50%;
+  color: #B7B8C5;
+  background: #F4F5F9;
+}
+.product-page__info-title{
+  /* H2 - Dekstop */
+
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+
+  /* Dark */
+
+  color: #090F24;
+
+  float: left;
+
+}
+.product-page__info-smm{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-page__info-smm-wrap{
+  display: flex;  
+  align-items: center;
+  gap: 10px;
+}
+.product-page__info-smm-wrap a{
+  width: 30px;
+  height: 30px;
+}
+.product-page__info-smm-wrap img{
+  width: 100%;
+  height: 100%;
 }

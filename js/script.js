@@ -76,7 +76,7 @@ $('document').ready(function(){
     /* тут крчч плюсы минусы на стр товара */
     $(document).ready(function() {
         $('body').on('click', '.number-minus, .number-plus', function(){
-            var $row = $(this).closest('.number');
+            var $row = $(this).closest('.product-page__info-buy-price-number');
             var $input = $row.find('.number-text');
             var step = $row.data('step');
             var val = parseFloat($input.val());
@@ -92,7 +92,7 @@ $('document').ready(function(){
      
         $('body').on('change', '.number-text', function(){
             var $input = $(this);
-            var $row = $input.closest('.number');
+            var $row = $input.closest('.product-page__info-buy-price-number');
             var step = $row.data('step');
             var min = parseInt($row.data('min'));
             var max = parseInt($row.data('max'));
