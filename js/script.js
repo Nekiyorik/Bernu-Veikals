@@ -76,7 +76,7 @@ $('document').ready(function(){
     /* тут крчч плюсы минусы на стр товара */
     $(document).ready(function() {
         $('body').on('click', '.number-minus, .number-plus', function(){
-            var $row = $(this).closest('.product-page__info-buy-price-number');
+            var $row = $(this).closest('.buy-price-number');
             var $input = $row.find('.number-text');
             var step = $row.data('step');
             var val = parseFloat($input.val());
@@ -92,7 +92,7 @@ $('document').ready(function(){
      
         $('body').on('change', '.number-text', function(){
             var $input = $(this);
-            var $row = $input.closest('.product-page__info-buy-price-number');
+            var $row = $input.closest('.buy-price-number');
             var step = $row.data('step');
             var min = parseInt($row.data('min'));
             var max = parseInt($row.data('max'));
@@ -107,5 +107,20 @@ $('document').ready(function(){
             $input.val(val);
         });
     });
-    
 });
+/* здесь тип код табуляции в корзине(осторожно он хрупкий) */
+function tabOrder(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+/* по умолчанию */
+document.getElementById("defaultOpen").click();
