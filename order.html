@@ -240,7 +240,7 @@
                             </p>
                         </div>
                     </button>
-                    <button class="order-page__tab-item tablinks" onclick="tabOrder(event, 'buyer')" id="defaultOpen">
+                    <button class="order-page__tab-item tablinks" onclick="tabOrder(event, 'buyer')">
                         <div class="order-page__tab-item-number">
                             <span>
                                 2
@@ -264,7 +264,7 @@
                             </p>
                         </div>
                     </button>
-                    <button class="order-page__tab-item tablinks" onclick="tabOrder(event, 'confirmation')">
+                    <button class="order-page__tab-item tablinks" onclick="tabOrder(event, 'confirmation')" id="defaultOpen">
                         <div class="order-page__tab-item-number">
                             <span>
                                 4
@@ -348,7 +348,7 @@
                   <div class="order-buyer__list">
                     <div class="order-buyer__item">
                       <sub>* обязательные поля</sub>
-                      <h3>Вы уже зарегестрированны?</h3>
+                      <h2>Вы уже зарегестрированны?</h2>
                       <p>Авторизуйтесь, чтобы автоматически заполнять данные и покупать в 3 раза быстрее</p>
                       <label for="email">
                         <input type="text" name="email" id="email" placeholder="Электронная почта*">
@@ -356,30 +356,125 @@
                       <label for="pass">
                         <input type="password" name="pass" id="pass" placeholder="Пароль*">
                       </label>
-                      <a href="#">
+                      <a href="#" class="order-buyer__item-login">
                         <p> 
                           <span class="icon-user"></span> Авторизоватся
                         </p>
                       </a>
-                      <h3>У Вас еще нет аккаунта?</h3>
+                      <h2>У Вас еще нет аккаунта?</h2>
                       <p>Зарегистрированным пользователям возвращается 0,5% от стоимости покупки</p>
-                      <a href="#">
+                      <a href="#" class="order-buyer__item-reg">
                         <p>Зарегестрироватся</p>
                       </a>
                     </div>
                     <div class="order-buyer__item">
                       <sub>* обязательные поля</sub>
-                      <h3>Купить без регистрации</h3>
+                      <h2>Купить без регистрации</h2>
                       <div class="order-buyer__item-radio">
-                        <label for=""></label>
+                        <label for="order-buyer__item-private">
+                            <input type="radio" name="nonreg" id="order-buyer__item-private" checked>
+                            Частное лицо
+                        </label>
+                        <label for="order-buyer__item-legal">
+                            <input type="radio" name="nonreg" id="order-buyer__item-legal">
+                            Юридическое лицо
+                        </label>
                       </div>
+                      <label for="email">
+                        <input type="text" name="nonreg" id="nonreg-email" placeholder="Электронная почта*">
+                      </label>
+                      <label for="tel">
+                        <input type="tel" name="nonreg" id="nonreg-tel" placeholder="Номер телефона*">
+                      </label>
+                      <label for="name">
+                        <input type="text" name="nonreg" id="nonreg-name" placeholder="Ваше имя*">
+                      </label>
+                      <label for="surname">
+                        <input type="text" name="nonreg" id="nonreg-surname" placeholder="Фамилия*">
+                      </label>
+                      <a href="#" class="but-nonreg">
+                        Продолжить<span class="icon-arr-s-r"></span>
+                      </a>
                     </div>
                   </div>
                 </div>
                 <div class="order-delivery tabcontent" id="delivery">
-                    .ore
+                    <h2>Введите данные для доставки</h2>
+                    <div class="order-delivery__form">
+                        <sub>* обязательные поля</sub>
+                        <h3>Адрес для получения доставки</h3>
+                        <label for="deliv-comm">
+                          <input type="text" name="deliv" id="deliv-city" placeholder="Город / Село / Пагаст / Район*">
+                        </label>
+                        <label for="deliv-comm">
+                          <input type="text" name="deliv" id="deliv-street" placeholder="Улица / Дом / Квартира*">
+                        </label>
+                        <label for="deliv-comm">
+                          <input type="text" name="deliv" id="deliv-index" placeholder="Почтовый индекс*">
+                        </label>
+                        
+                        <h3>Информация для курьера</h3>
+                        <label for="deliv-comm">
+                          <input type="textarea" name="deliv" id="deliv-comm" placeholder="Текст">
+                        </label>
+                        
+                        <h3>Информация о заказе</h3>
+                        <ul>
+                            <hr>
+                            <li>
+                                <p>Товары</p>
+                                <ol>
+                                    <li>100€</li>
+                                    <li>1500€</li>
+                                </ol>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Доставка</p>
+                                <p>1.99 €</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Сумма скидки</p>
+                                <p>-70 €</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <h3>Общая сумма:</h3>
+                                <span class="order-delivery__form-sum">1 703.99 €</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="order-delivery__rules">
+                        <input type="checkbox" name="rules" id="rules">
+                        <label for="rules">Я ознакомился (-лась) и согласен (-на) с правилами покупки и возврата, а также с правилами обработки данных.</label>
+                    </div>
+                    <div class="order-delivery__confirm">
+                        <a href="#">
+                            <span class="icon-arr-l-l"></span>Добавить еще товары
+                        </a>
+                        <a href="#">
+                            <span class="icon-check"></span>Подтвердить заказ
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="order-delivery__alert">
+                        <span>
+                            <p>i</p>
+                        </span>
+                        <p>Документ подтверждающий покупку, который является также гарантийной квитанцией, будет отправлен в электронном виде.</p>
+                    </div>
                 </div>
                 <div class="order-confirmation tabcontent" id="confirmation">
+                    <div class="order-confirmation__wrap">
+                        <img src="img/Parachute.png" alt="Parachute">
+                        <h2>Ваш заказ №15883 принят в обработку</h2>
+                        <p>В ближайшее время мы пришлем на Вашу почту чек для оплаты</p>
+                        <a href="#">
+                            <span class="icon-arr-s-l"></span> Вернутся в каталог
+                        </a>
+                    </div>
                 </div>
             </div>
         </article>
